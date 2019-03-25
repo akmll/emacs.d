@@ -3,6 +3,8 @@
 ;;; Commentary:
 ;;
 
+;;; Code:
+
 ;; Initialize CC-mode style
 (c-add-style "zap"
              '("linux"
@@ -12,6 +14,11 @@
                (c-basic-offset . 4)
                (c-tab-always-indent . nil)
                ))
+
+(require-package 'ggtags)
+(setq ggtags-enable-navigation-keys nil)
+
+(require-package 'smart-tabs-mode)
 
 (defun zap/c-mode-hook ()
   (local-set-key (kbd "M-f") 'c-forward-into-nomenclature)
@@ -24,12 +31,13 @@
 
   (setq c-tab-always-indent nil)
 
-  (c-set-style "zap"))
+  (c-set-style "zap")
+  (smart-tabs-insinuate 'c 'c++ 'java 'javascript 'python 'ruby 'nxml)
+  (when (derived-mode-p 'c-mode 'c++-mode 'java-mode 'asm-mode)
+    (ggtags-mode 1))
+  )
 
 (add-hook 'c-mode-common-hook 'zap/c-mode-hook)
-
-(require-package 'smart-tabs-mode)
-(smart-tabs-insinuate 'c 'c++ 'java 'javascript 'python 'ruby 'nxml)
 
 (provide 'init-cc-mode)
 
