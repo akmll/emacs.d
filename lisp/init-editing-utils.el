@@ -30,7 +30,7 @@
  scroll-preserve-screen-position 'always
  set-mark-command-repeat-pop t
  tooltip-delay 1.5
- truncate-lines nil
+ truncate-lines t
  truncate-partial-width-windows nil)
 
 (add-hook 'after-init-hook 'global-auto-revert-mode)
