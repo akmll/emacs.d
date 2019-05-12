@@ -122,6 +122,7 @@
 (require 'init-common-lisp)
 
 (require 'init-cc-mode)
+(require 'init-cmake)
 
 (when *spell-check-support-enabled*
   (require 'init-spelling))
