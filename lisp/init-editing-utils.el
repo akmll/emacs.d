@@ -31,6 +31,7 @@
  set-mark-command-repeat-pop t
  tooltip-delay 1.5
  truncate-lines t
+ kill-whole-line t
  truncate-partial-width-windows nil)
 
 (add-hook 'after-init-hook 'global-auto-revert-mode)

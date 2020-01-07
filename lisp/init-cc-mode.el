@@ -7,10 +7,12 @@
 
 ;; Initialize CC-mode style
 (c-add-style "zap"
-             '("linux"
+             '("bsd"
                (c-offsets-alist
                 (inextern-lang . 0)
-                (inline-open . 0))
+                (inline-open . 0)
+                (innamespace . 0)
+                )
                (c-basic-offset . 4)
                (c-tab-always-indent . nil)
                ))

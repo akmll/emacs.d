@@ -7,6 +7,7 @@
 
   ;; Shorter modeline
   (setq-default projectile-mode-line-prefix " Proj")
+  (setq-default projectile-indexing-method 'alien)
 
   (after-load 'projectile
     (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map))
