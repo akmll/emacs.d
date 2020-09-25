@@ -26,6 +26,7 @@
  indent-tabs-mode nil
  make-backup-files nil
  mouse-yank-at-point t
+ comment-fill-column 120
  save-interprogram-paste-before-kill t
  scroll-preserve-screen-position 'always
  set-mark-command-repeat-pop t
